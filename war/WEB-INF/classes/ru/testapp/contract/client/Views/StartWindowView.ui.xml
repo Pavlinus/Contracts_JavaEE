@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	
+	<g:VerticalPanel>
+		<g:HTMLPanel>
+			<g:HorizontalPanel>
+				<g:Button ui:field="openContract">Открыть контракт</g:Button>
+				<g:Button ui:field="createContract">Создать контракт</g:Button>	
+			</g:HorizontalPanel>
+		</g:HTMLPanel>
+	
+		<c:CellTable ui:field="table"/>
+	</g:VerticalPanel>
+</ui:UiBinder> 

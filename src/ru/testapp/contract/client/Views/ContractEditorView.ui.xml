@@ -1,0 +1,439 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	
+	.right-align {
+		text-align:right;
+		margin-right: 5%;
+	}
+	
+	.center-align {
+		text-align:center;
+	}
+	
+	.small-size-box {
+		width: 100px;
+		height: 30px;
+	}
+	
+	.mid-size-box {
+		width: 150px;
+		height: 30px;
+	}
+	
+	.large-size-box {
+		width: 250px;
+		height: 30px;
+	}
+	
+	.xlarge-size-box {
+		width: 400px;
+		height: 30px;
+	}
+	
+	.xxlarge-size-box {
+		width: 500px;
+		height: 30px;
+	}
+	
+	.h1-label {
+		font-size: 22pt;
+		vertical-align: center;
+	}
+	
+	.half-size {
+		width: 50%;
+	}
+	
+	.label-margin {
+		margin-left: 7%;
+	}
+	
+	.row-grid-heigth {
+		height: 40px;
+	}
+	
+	.cell-grid-heigth {
+		height: 50px;
+	}
+	
+	.cell-grid-width {
+		width: 100%;
+	}
+	
+	.row-grid-heigth-header {
+		height: 60px;
+	}
+	
+	.textarea-wh {
+		min-width: 500px;
+		min-height: 100px;
+		max-width: 500px;
+		max-height: 100px;
+	}
+	</ui:style>
+	
+	<g:HTMLPanel>
+	<g:VerticalPanel>	
+		<g:Grid>
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Label styleName="{style.h1-label}">Расчет</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:HorizontalPanel>		
+			<g:Grid>
+				<g:row>
+					<g:customCell>
+						<g:Label styleName="{style.right-align}">Страховая сумма</g:Label>
+					</g:customCell>
+					<g:customCell>
+						<g:TextBox styleName="{style.mid-size-box}" ui:field="insuranceSum">
+							12345
+						</g:TextBox>
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label styleName="{style.right-align}">Тип недвижимости</g:Label>
+					</g:customCell>
+					<g:customCell>
+						<g:ListBox styleName="{style.mid-size-box}" ui:field="realtyType"/>
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label styleName="{style.right-align}">Год постройки</g:Label>
+					</g:customCell>
+					<g:customCell>
+						<g:TextBox styleName="{style.mid-size-box}" ui:field="builtYear">
+							2014
+						</g:TextBox>
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label styleName="{style.right-align}">Площадь, кв.м.</g:Label>
+					</g:customCell>
+					<g:customCell>
+						<g:TextBox styleName="{style.mid-size-box}" ui:field="area">
+							34,2
+						</g:TextBox>
+					</g:customCell>
+				</g:row>
+			</g:Grid>
+			
+			<g:Grid>
+				<g:row>
+					<g:customCell>
+						<g:Label styleName="{style.right-align}">Срок действия с</g:Label>
+					</g:customCell>
+					<g:customCell>
+						<c:DateBox ui:field="pickerSince"/>
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label styleName="{style.right-align}">по</g:Label>
+					</g:customCell>
+					<g:customCell>
+						<c:DateBox ui:field="pickerTo"/>
+					</g:customCell>
+				</g:row>
+			</g:Grid>
+		</g:HorizontalPanel>
+		
+		<g:Grid >
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Button ui:field="calculate">Рассчитать</g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:HorizontalPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align}">Дата расчета</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<c:DateBox styleName="{style.mid-size-box}" ui:field="calcDate"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						№ договора
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="contractNum"/>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Премия
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="bonus"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Дата заключения
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<c:DateBox styleName="{style.mid-size-box}" ui:field="contractDate"/>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		</g:HorizontalPanel>
+		
+		<g:Grid>
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Label styleName="{style.h1-label}">Страхователь</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Button ui:field="selectPerson">Выбрать</g:Button>
+				</g:customCell>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						ФИО
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.xlarge-size-box}" ui:field="personName">
+						Spok Victorovich
+					</g:TextBox>
+				</g:customCell>
+				<g:customCell>
+					<g:Button ui:field="editPerson">Изменить</g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:HorizontalPanel>
+			<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align}">Дата рождения</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<c:DateBox ui:field="birthDate"/>
+				</g:customCell>
+			</g:row>
+			</g:Grid>
+		
+			<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Паспорт серия
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.small-size-box}" ui:field="passportSerial">
+						4444
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">№</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.small-size-box}" ui:field="passportNum">
+						123456
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			</g:Grid>
+		</g:HorizontalPanel>
+		
+		<g:Grid>
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Label styleName="{style.h1-label}">Адрес недвижимости</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:HorizontalPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align}">Государство</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:ListBox styleName="{style.mid-size-box}" ui:field="state"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align}">Населенный пункт</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="locality">
+						Silent Hill
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Строение
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="building">
+						Some
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Квартира
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="flat">
+						12
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Индекс
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="postIndex">
+						186000
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Улица
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="street">
+						Потерянных ключей
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Район
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="region">
+						Людный
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Корпус
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="housing">
+						3
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Республика, обл.
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="republic">
+						Замухрынская
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.right-align} {style.label-margin}">
+						Дом
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="house">
+						43
+					</g:TextBox>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		</g:HorizontalPanel>
+		
+		<g:Grid>
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Label styleName="{style.h1-label}">Комментарий</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:Grid>
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell styleName="{style.half-size}">
+					<g:Label>
+						Комментарий к договору (не печатается)
+					</g:Label>
+				</g:customCell>
+				<g:customCell>
+					<g:TextArea styleName="{style.textarea-wh}" ui:field="comment"/>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+		<g:Grid>
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Button ui:field="save">Сохранить</g:Button>
+				</g:customCell>
+				<g:customCell>
+					<g:Button ui:field="back">К списку договоров</g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

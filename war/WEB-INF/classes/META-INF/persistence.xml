@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+
+    <persistence-unit name="db-persist">
+    	<class>ru.testapp.contract.server.Address</class>
+    	<class>ru.testapp.contract.server.Person</class>
+    	<class>ru.testapp.contract.server.Contract</class>
+    	<class>ru.testapp.contract.server.RealtyCoefficient</class>
+    	<class>ru.testapp.contract.server.AreaCoefficient</class>
+    	<class>ru.testapp.contract.server.YearCoefficient</class>
+    	<class>ru.testapp.contract.server.RealtyCoefficient</class>
+    	
+    	<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/contracts"/>
+			<property name="javax.persistence.jdbc.user" value="tester"/>
+      		<property name="javax.persistence.jdbc.password" value="tester"/>
+      		<property name="hibernate.show_sql" value="true" />
+      		<!-- <property name="hibernate.hbm2ddl.auto" value="create"/> -->
+    	</properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,94 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>	
+	.sub-title {
+		text-align:center;
+		text-size: 12pt;
+	}
+	
+	.mid-size-box {
+		width: 150px;
+		height: 30px;
+	}
+	
+	.row-grid-heigth-header {
+		height: 60px;
+	}
+	
+	.table-margin {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	</ui:style>
+	
+	<g:HTMLPanel>
+	<g:VerticalPanel>	
+		<g:HorizontalPanel>		
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="surname"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.sub-title}">фамилия</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="name"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.sub-title}">имя</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:TextBox styleName="{style.mid-size-box}" ui:field="secondName"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.sub-title}">отчество</g:Label>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Button ui:field="find">Найти</g:Button>
+				</g:customCell>
+				<g:customCell>
+					<g:Label/>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		</g:HorizontalPanel>
+		
+		<c:CellTable styleName="{style.table-margin}" ui:field="personTable"/>
+		
+		<g:Grid >
+			<g:row styleName="{style.row-grid-heigth-header}">
+				<g:customCell>
+					<g:Button ui:field="select">Выбрать</g:Button>
+				</g:customCell>
+				<g:customCell>
+					<g:Button ui:field="create">Новый</g:Button>
+				</g:customCell>
+				<g:customCell>
+					<g:Button ui:field="close">Закрыть</g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

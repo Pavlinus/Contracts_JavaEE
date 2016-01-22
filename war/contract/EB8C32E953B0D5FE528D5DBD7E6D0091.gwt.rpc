@@ -1,0 +1,24 @@
+@FinalFields, false
+com.google.gwt.i18n.shared.impl.DateRecord, true, true, false, false, com.google.gwt.i18n.shared.impl.DateRecord/3173882066, 3173882066
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.Integer, true, true, false, false, java.lang.Integer/3438268394, 3438268394
+java.lang.Number, true, false, false, false, java.lang.Number/300033342, 300033342
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.sql.Date, true, true, false, false, java.sql.Date/730999118, 730999118
+java.sql.Time, true, true, false, false, java.sql.Time/1816797103, 1816797103
+java.sql.Timestamp, true, true, false, false, java.sql.Timestamp/3040052672, 3040052672
+java.util.ArrayList, true, true, false, false, java.util.ArrayList/4159755760, 4159755760
+java.util.Date, true, true, false, false, java.util.Date/3385151746, 3385151746
+ru.testapp.contract.client.ContractTableItem, true, true, false, false, ru.testapp.contract.client.ContractTableItem/93184235, 93184235
+ru.testapp.contract.client.LoadDataService, false, false, false, false, _, 3791732978
+ru.testapp.contract.client.dto.AddressDTO, true, true, false, false, ru.testapp.contract.client.dto.AddressDTO/3221459239, 3221459239
+ru.testapp.contract.client.dto.AreaCoefficientDTO, true, true, false, false, ru.testapp.contract.client.dto.AreaCoefficientDTO/1759867548, 1759867548
+ru.testapp.contract.client.dto.ContractDTO, true, true, false, false, ru.testapp.contract.client.dto.ContractDTO/1784969273, 1784969273
+ru.testapp.contract.client.dto.PersonDTO, true, true, false, false, ru.testapp.contract.client.dto.PersonDTO/157515087, 157515087
+ru.testapp.contract.client.dto.RealtyTypeDTO, true, true, false, false, ru.testapp.contract.client.dto.RealtyTypeDTO/1608964007, 1608964007
+ru.testapp.contract.client.dto.YearCoefficientDTO, true, true, false, false, ru.testapp.contract.client.dto.YearCoefficientDTO/312064971, 312064971

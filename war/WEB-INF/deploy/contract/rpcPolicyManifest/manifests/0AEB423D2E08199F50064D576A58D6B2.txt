@@ -1,0 +1,2 @@
+serviceClass: ru.testapp.contract.client.EditDataService
+path: EA92B49B5DD300736D48D92D50B8DD15.gwt.rpc

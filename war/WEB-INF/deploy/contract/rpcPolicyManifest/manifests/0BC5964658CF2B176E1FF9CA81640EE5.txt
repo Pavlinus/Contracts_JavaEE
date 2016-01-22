@@ -1,0 +1,2 @@
+serviceClass: ru.testapp.contract.client.LoadDataService
+path: FF702970E39615FAAE3F890B82486B07.gwt.rpc
